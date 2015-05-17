@@ -159,7 +159,6 @@ class Board(_n:Int) {
     val wasKouTake = willKouTake(p)
     matrix(i)(j) = c
     val xs = removeListByPut(i, j, c)
-    println(xs)
     agehama(bw2int(c)) += xs.length
     removeStones(xs)
     if (wasKouTake) kou = Some(xs.head) else kou = None

@@ -3,6 +3,7 @@ import scala.collection.mutable
 import org.scalatest._
 
 class RemoveTest extends FunSuite {
+  import go.Board
   def run(input: Seq[Board.Put], result: Seq[Board.Put]) = {
     val b = new Board(19)
     input foreach (b.putStone(_))
