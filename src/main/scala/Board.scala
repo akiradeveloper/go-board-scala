@@ -12,8 +12,8 @@ final case object Dame extends Color
 class Board(_n:Int) {
   import go.Board._
 
-  val n = _n
-  val matrix = Array.fill[Color](n+2, n+2)(Outside)
+  private val n = _n
+  private val matrix = Array.fill[Color](n+2, n+2)(Outside)
   for (i <- 1 to n) {
     for (j <- 1 to n) {
       matrix(i)(j) = Empty
