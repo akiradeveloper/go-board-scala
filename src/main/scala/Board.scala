@@ -10,8 +10,7 @@ final case object Outside extends Color
 final case object Dame extends Color
 
 class Board(_n:Int) {
-  type Pos = (Int, Int)
-  type Put = (Int, Int, Color)
+  import go.Board._
 
   val n = _n
   val matrix = Array.fill[Color](n+2, n+2)(Outside)
